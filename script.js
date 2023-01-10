@@ -1,5 +1,10 @@
 const selectFavicon = document.querySelector(`head > link[rel='icon']`);
 const buttons = document.querySelectorAll(`.grid > button`);
+const selectCode = document.querySelector(`body > code`);
+
+function updateCode() {
+  selectCode.innerText = selectFavicon.getAttribute(`href`);
+}
 
 function generateFavicon(string, icon) {
   return `
@@ -15,5 +20,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     newFavicon = generateFavicon`${button.innerText}`;
     selectFavicon.setAttribute(`href`, `data:image/svg+xml,${newFavicon}`);
+    updateCode();
   });
 });
+
+updateCode();
