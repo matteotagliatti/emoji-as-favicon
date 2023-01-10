@@ -3,7 +3,10 @@ const buttons = document.querySelectorAll(`.grid > button`);
 const selectCode = document.querySelector(`body > code`);
 
 function updateCode() {
-  selectCode.innerText = selectFavicon.getAttribute(`href`);
+  selectCode.innerText = selectFavicon
+    .getAttribute(`href`)
+    .replace(/(\r\n|\n|\r)/gm, "")
+    .replace(/\s/g, "");
 }
 
 function generateFavicon(string, icon) {

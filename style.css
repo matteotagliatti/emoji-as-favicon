@@ -1,0 +1,69 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.grid button {
+  font-size: 2rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  background-color: #efefef;
+}
+
+.grid button:hover {
+  cursor: pointer;
+  background-color: #e3e3e3;
+}
+
+.codeblock {
+  padding: 1rem;
+  background-color: rgb(218, 222, 223);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* mobile breakdown */
+
+/* @media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+} */
