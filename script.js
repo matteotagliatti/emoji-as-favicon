@@ -1,6 +1,6 @@
 const selectFavicon = document.querySelector(`head > link[rel='icon']`);
 const buttons = document.querySelectorAll(`.grid > button`);
-const selectCode = document.querySelector(`body > code`);
+const selectCode = document.querySelector(`#code`);
 
 function updateCode() {
   selectCode.innerText = selectFavicon
@@ -10,11 +10,7 @@ function updateCode() {
 
 function generateFavicon(string, icon) {
   return `
-      <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
-        <text y=%22.9em%22 font-size=%2290%22>
-          ${icon}
-        </text>
-      </svg>
+      <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${icon}</text></svg>
     `.trim();
 }
 

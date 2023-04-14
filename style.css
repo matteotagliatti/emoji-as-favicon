@@ -59,11 +59,3 @@ p {
   border-radius: 5px;
   margin-bottom: 0.5rem;
 }
-
-/* mobile breakdown */
-
-/* @media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-  }
-} */
