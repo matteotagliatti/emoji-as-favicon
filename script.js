@@ -5,8 +5,7 @@ const selectCode = document.querySelector(`body > code`);
 function updateCode() {
   selectCode.innerText = selectFavicon
     .getAttribute(`href`)
-    .replace(/(\r\n|\n|\r)/gm, "")
-    .replace(/\s/g, "");
+    .replace(/(\r\n|\n|\r)/gm, "");
 }
 
 function generateFavicon(string, icon) {
